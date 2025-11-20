@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "services": "Services",
+    "industries": "Industries",
+    "about": "About",
+    "contact": "Contact",
+    "talkToUs": "Talk to Us"
+  },
+  "hero": {
+    "badge": "Strategic Consulting",
+    "title": "Business\nTransformation",
+    "subtitle": "We drive operational excellence and sustainable growth with proven methodologies and measurable results.",
+    "freeConsultation": "Free Consultation",
+    "learnMore": "Learn More",
+    "explore": "Explore"
+  },
+  "whatWeDo": {
+    "title": "We transform ideas into effective business solutions",
+    "description": "At Genco Consulting we work with executive management to take your company to new levels of performance. With proven methodologies, we achieve results that your company could not achieve on its own.",
+    "startProject": "Start Project",
+    "viewServices": "View Services",
+    "clientsServed": "Clients served and companies transformed",
+    "projectsCompleted": "Projects completed",
+    "successfulImplementations": "Successful implementations",
+    "yearsExperience": "years of dedicated experience",
+    "ourApproach": "Our Approach",
+    "measurableResults": "Measurable results and guaranteed transformation",
+    "openToProjects": "Open to new projects and collaborations",
+    "provenMethodology": "Proven methodology, guaranteed results"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "label": "FAQ",
+    "questions": {
+      "transform": {
+        "question": "How can you transform our business processes?",
+        "answer": "We analyze your current processes, identify improvement opportunities and implement personalized technological solutions that automate tasks, reduce costs and increase the operational efficiency of your organization."
+      },
+      "services": {
+        "question": "What consulting services do you offer?",
+        "answer": "We offer consulting in process improvement, automation, information technology implementation, supply chain optimization, lean manufacturing, process certifications, business intelligence and organizational development."
+      },
+      "sizes": {
+        "question": "Do you work with companies of all sizes?",
+        "answer": "Yes, we work with companies of all sizes, from startups to large corporations. Our solutions adapt to the specific needs and budget of each client, ensuring measurable and sustainable results."
+      },
+      "timeline": {
+        "question": "How long does it take to implement a solution?",
+        "answer": "Implementation time varies depending on project complexity. Small projects can take 4-8 weeks, while complete transformations may require 3-6 months. We always work with clear timelines and defined deliverables."
+      },
+      "success": {
+        "question": "How do you guarantee project success?",
+        "answer": "We use proven methodologies, establish clear KPIs from the start, maintain constant communication with our clients and offer continuous training to their teams to ensure successful adoption of implemented solutions."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in touch\nwith us",
+    "description": "We are here to help. Whether you have questions about our services, need assistance with your account, or want to provide feedback, our team is ready to assist you.",
+    "email": "Email:",
+    "mexico": "Mexico:",
+    "unitedStates": "United States:",
+    "form": {
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Enter your first name...",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Enter your last name...",
+      "email": "Email",
+      "emailPlaceholder": "Enter your email...",
+      "message": "How can we help you?",
+      "messagePlaceholder": "Enter your message...",
+      "submit": "Send Message"
+    },
+    "footer": {
+      "company": "Genco Consulting",
+      "tagline": "Operational excellence and sustainable growth",
+      "services": "Services",
+      "consulting": "Consulting",
+      "industries": "Industries",
+      "copyright": "Genco Consulting. All rights reserved."
+    }
+  }
+}

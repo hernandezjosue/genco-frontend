@@ -1,0 +1,83 @@
+{
+  "navigation": {
+    "services": "Servicios",
+    "industries": "Industrias",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "talkToUs": "Hablar con Nosotros"
+  },
+  "hero": {
+    "badge": "Consultoría Estratégica",
+    "title": "Transformación\nEmpresarial",
+    "subtitle": "Impulsamos la excelencia operacional y el crecimiento sostenible con metodologías probadas y resultados medibles.",
+    "freeConsultation": "Consultoría Gratuita",
+    "learnMore": "Conocer Más",
+    "explore": "Explora"
+  },
+  "whatWeDo": {
+    "title": "Transformamos ideas en soluciones empresariales efectivas",
+    "description": "En Genco Consulting trabajamos con la dirección ejecutiva para llevar a su empresa a nuevos niveles de rendimiento. Con metodologías probadas, logramos resultados que su compañía no podría alcanzar por sí sola.",
+    "startProject": "Iniciar Proyecto",
+    "viewServices": "Ver Servicios",
+    "clientsServed": "Clientes atendidos y empresas transformadas",
+    "projectsCompleted": "Proyectos completados",
+    "successfulImplementations": "Implementaciones exitosas",
+    "yearsExperience": "años de experiencia dedicada",
+    "ourApproach": "Nuestro Enfoque",
+    "measurableResults": "Resultados medibles y transformación garantizada",
+    "openToProjects": "Abiertos a nuevos proyectos y colaboraciones",
+    "provenMethodology": "Metodología probada, resultados garantizados"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "label": "FAQ",
+    "questions": {
+      "transform": {
+        "question": "¿Cómo pueden transformar nuestros procesos de negocio?",
+        "answer": "Analizamos sus procesos actuales, identificamos oportunidades de mejora y implementamos soluciones tecnológicas personalizadas que automatizan tareas, reducen costos y aumentan la eficiencia operativa de su organización."
+      },
+      "services": {
+        "question": "¿Qué servicios de consultoría ofrecen?",
+        "answer": "Ofrecemos consultoría en mejora de procesos, automatización, implementación de tecnologías de información, optimización de cadenas de suministro, manufactura esbelta, certificaciones de procesos, business intelligence y desarrollo organizacional."
+      },
+      "sizes": {
+        "question": "¿Trabajan con empresas de todos los tamaños?",
+        "answer": "Sí, trabajamos con empresas de todos los tamaños, desde startups hasta grandes corporaciones. Nuestras soluciones se adaptan a las necesidades específicas y presupuesto de cada cliente, asegurando resultados medibles y sostenibles."
+      },
+      "timeline": {
+        "question": "¿Cuánto tiempo toma implementar una solución?",
+        "answer": "El tiempo de implementación varía según la complejidad del proyecto. Proyectos pequeños pueden tomar de 4-8 semanas, mientras que transformaciones completas pueden requerir 3-6 meses. Siempre trabajamos con cronogramas claros y entregables definidos."
+      },
+      "success": {
+        "question": "¿Cómo garantizan el éxito de los proyectos?",
+        "answer": "Utilizamos metodologías probadas, establecemos KPIs claros desde el inicio, mantenemos comunicación constante con nuestros clientes y ofrecemos capacitación continua a sus equipos para asegurar la adopción exitosa de las soluciones implementadas."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in touch\nwith us",
+    "description": "Estamos aquí para ayudar. Ya sea que tenga preguntas sobre nuestros servicios, necesite asistencia con su cuenta o desee proporcionar comentarios, nuestro equipo está listo para asistirle.",
+    "email": "Email:",
+    "mexico": "México:",
+    "unitedStates": "United States:",
+    "form": {
+      "firstName": "Nombre",
+      "firstNamePlaceholder": "Ingresa tu nombre...",
+      "lastName": "Apellido",
+      "lastNamePlaceholder": "Ingresa tu apellido...",
+      "email": "Correo Electrónico",
+      "emailPlaceholder": "Ingresa tu correo electrónico...",
+      "message": "¿Cómo podemos ayudarte?",
+      "messagePlaceholder": "Ingresa tu mensaje...",
+      "submit": "Enviar Mensaje"
+    },
+    "footer": {
+      "company": "Genco Consulting",
+      "tagline": "Excelencia operacional y crecimiento sostenible",
+      "services": "Servicios",
+      "consulting": "Consultoría",
+      "industries": "Industrias",
+      "copyright": "Genco Consulting. Todos los derechos reservados."
+    }
+  }
+}
