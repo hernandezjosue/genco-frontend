@@ -55,11 +55,11 @@
     }
   },
   "contact": {
-    "title": "Get in touch\nwith us",
+    "title": "Contacta\ncon nosotros",
     "description": "Estamos aquí para ayudar. Ya sea que tenga preguntas sobre nuestros servicios, necesite asistencia con su cuenta o desee proporcionar comentarios, nuestro equipo está listo para asistirle.",
     "email": "Email:",
     "mexico": "México:",
-    "unitedStates": "United States:",
+    "unitedStates": "Estados Unidos:",
     "form": {
       "firstName": "Nombre",
       "firstNamePlaceholder": "Ingresa tu nombre...",
@@ -69,7 +69,8 @@
       "emailPlaceholder": "Ingresa tu correo electrónico...",
       "message": "¿Cómo podemos ayudarte?",
       "messagePlaceholder": "Ingresa tu mensaje...",
-      "submit": "Enviar Mensaje"
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando..."
     },
     "footer": {
       "company": "Genco Consulting",
@@ -79,5 +80,83 @@
       "industries": "Industrias",
       "copyright": "Genco Consulting. Todos los derechos reservados."
     }
+  },
+  "servicesDetailed": {
+    "titlePrefix": "Nuestros",
+    "titleHighlight": "Servicios Especializados",
+    "intro": "Soluciones integrales directamente diseñadas para transformar operaciones. Historias reales, resultados medibles — directo de nuestros clientes satisfechos.",
+    "items": {
+      "processImprovement": {
+        "title": "Mejora De Procesos",
+        "description": "Optimizamos tus procesos empresariales mediante metodologías probadas que eliminan desperdicios y maximizan eficiencia operativa."
+      },
+      "processAutomation": {
+        "title": "Automatización De Procesos",
+        "description": "Implementamos soluciones tecnológicas que automatizan tareas repetitivas, reduciendo errores y liberando tiempo valioso."
+      },
+      "informationTechnology": {
+        "title": "Tecnologías De Información",
+        "description": "Desarrollamos e implementamos sistemas tecnológicos robustos que impulsan la transformación digital de tu empresa."
+      },
+      "supplyChainOptimization": {
+        "title": "Optimización Cadena De Suministros",
+        "description": "Mejoramos la eficiencia logística desde la adquisición hasta la entrega, reduciendo costos y tiempos de ciclo."
+      },
+      "processCertifications": {
+        "title": "Certificaciones De Procesos",
+        "description": "Te guiamos en la obtención de certificaciones internacionales que validan la calidad de tus operaciones."
+      },
+      "leanManufacturing": {
+        "title": "Manufactura Esbelta",
+        "description": "Aplicamos principios Lean para crear sistemas de producción eficientes que entregan máximo valor con mínimo desperdicio."
+      },
+      "profitabilityIncrease": {
+        "title": "Aumento De La Rentabilidad",
+        "description": "Identificamos oportunidades de mejora que incrementan tus márgenes y fortalecen la posición financiera de tu negocio."
+      },
+      "costOptimization": {
+        "title": "Optimización De Costos",
+        "description": "Analizamos tu estructura de costos para identificar y eliminar gastos innecesarios sin comprometer calidad."
+      },
+      "tpm": {
+        "title": "TPM",
+        "description": "Implementamos Mantenimiento Productivo Total para maximizar la efectividad de tus equipos e instalaciones."
+      },
+      "strategicPlanning": {
+        "title": "Planeación Estratégica",
+        "description": "Desarrollamos planes estratégicos alineados con tu visión que transforman objetivos en resultados medibles."
+      },
+      "businessIntelligence": {
+        "title": "Business Intelligence",
+        "description": "Convertimos tus datos en información accionable mediante dashboards y análisis que facilitan decisiones inteligentes."
+      },
+      "organizationalDevelopment": {
+        "title": "Desarrollo Organizacional",
+        "description": "Fortalecemos tu capital humano con programas que desarrollan habilidades y mejoran el clima organizacional."
+      }
+    }
+  },
+  "industries": {
+    "badgeLabel": "Experiencia Multisectorial",
+    "titlePrefix": "Industrias que",
+    "titleHighlight": "Transformamos",
+    "intro": "Especializados en optimización de procesos SAP S/4HANA para múltiples sectores industriales",
+    "items": {
+      "automotive": { "name": "Automotriz", "category": "Manufactura" },
+      "banking": { "name": "Bancos", "category": "Servicios Financieros" },
+      "consumer": { "name": "Consumo", "category": "Retail" },
+      "insurance": { "name": "Seguros", "category": "Servicios Financieros" },
+      "manufacturing": { "name": "Manufactura", "category": "Industria" },
+      "miningMetals": { "name": "Minería y Metales", "category": "Recursos" },
+      "retail": { "name": "Retail", "category": "Comercio" },
+      "telecommunications": { "name": "Telecomunicaciones", "category": "Tecnología" },
+      "logisticsTransport": { "name": "Logística y Transporte", "category": "Servicios" },
+      "government": { "name": "Gobierno", "category": "Sector Público" },
+      "textile": { "name": "Textil", "category": "Manufactura" },
+      "chemical": { "name": "Química", "category": "Industria" }
+    },
+    "ctaTitle": "¿No encuentras tu industria?",
+    "ctaDescription": "Contáctanos para soluciones personalizadas adaptadas a las necesidades específicas de tu sector",
+    "ctaButton": "Hablar con un experto"
   }
 }

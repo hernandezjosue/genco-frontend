@@ -9,6 +9,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations, useLocale } from 'next-intl'
 import { usePathname, useRouter } from 'next/navigation'
 import {LogoLight} from "@/components/logo";
+import {scrollToNext} from "@/components/hero";
 
 export function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
@@ -82,7 +83,9 @@ export function Navigation() {
                 </div>
               </div>
 
-              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-5 h-9">
+              <Button
+                  onClick={()=>scrollToNext('#contacto')}
+                  size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-5 h-9">
                 {t('talkToUs')}
               </Button>
             </div>
@@ -201,6 +204,8 @@ export function Navigation() {
                   className="w-full max-w-md pb-4"
                 >
                   <Button
+                      onClick={()=>scrollToNext('#contacto')}
+
                     size="lg"
                     className="w-full h-16 text-lg bg-primary text-primary-foreground hover:bg-primary/90 font-semibold rounded-xl"
                     onClick={() => setIsOpen(false)}

@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion"
 import { useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 import {
   Car,
   Building2,
@@ -18,21 +19,22 @@ import {
 } from "lucide-react"
 
 const industries = [
-  { name: "Automotriz", category: "Manufactura", icon: Car, gradient: "from-blue-500 to-cyan-500" },
-  { name: "Bancos", category: "Servicios Financieros", icon: Building2, gradient: "from-blue-600 to-indigo-600" },
-  { name: "Consumo", category: "Retail", icon: ShoppingBag, gradient: "from-cyan-500 to-blue-500" },
-  { name: "Seguros", category: "Servicios Financieros", icon: Shield, gradient: "from-indigo-600 to-blue-600" },
-  { name: "Manufactura", category: "Industria", icon: Factory, gradient: "from-blue-500 to-blue-600" },
-  { name: "Minería y Metales", category: "Recursos", icon: Mountain, gradient: "from-slate-600 to-blue-600" },
-  { name: "Retail", category: "Comercio", icon: Store, gradient: "from-cyan-400 to-blue-500" },
-  { name: "Telecomunicaciones", category: "Tecnología", icon: Radio, gradient: "from-blue-600 to-indigo-500" },
-  { name: "Logística y Transporte", category: "Servicios", icon: Truck, gradient: "from-blue-500 to-cyan-600" },
-  { name: "Gobierno", category: "Sector Público", icon: Landmark, gradient: "from-indigo-700 to-blue-700" },
-  { name: "Textil", category: "Manufactura", icon: Shirt, gradient: "from-cyan-500 to-blue-400" },
-  { name: "Química", category: "Industria", icon: Beaker, gradient: "from-blue-600 to-cyan-600" },
-]
+  { id: "automotive", icon: Car, gradient: "from-blue-500 to-cyan-500" },
+  { id: "banking", icon: Building2, gradient: "from-blue-600 to-indigo-600" },
+  { id: "consumer", icon: ShoppingBag, gradient: "from-cyan-500 to-blue-500" },
+  { id: "insurance", icon: Shield, gradient: "from-indigo-600 to-blue-600" },
+  { id: "manufacturing", icon: Factory, gradient: "from-blue-500 to-blue-600" },
+  { id: "miningMetals", icon: Mountain, gradient: "from-slate-600 to-blue-600" },
+  { id: "retail", icon: Store, gradient: "from-cyan-400 to-blue-500" },
+  { id: "telecommunications", icon: Radio, gradient: "from-blue-600 to-indigo-500" },
+  { id: "logisticsTransport", icon: Truck, gradient: "from-blue-500 to-cyan-600" },
+  { id: "government", icon: Landmark, gradient: "from-indigo-700 to-blue-700" },
+  { id: "textile", icon: Shirt, gradient: "from-cyan-500 to-blue-400" },
+  { id: "chemical", icon: Beaker, gradient: "from-blue-600 to-cyan-600" },
+] as const
 
 export function Industries() {
+  const t = useTranslations("industries")
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
@@ -88,19 +90,19 @@ export function Industries() {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-semibold">
               <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse" />
-              Experiencia Multisectorial
+              {t("badgeLabel")}
             </span>
           </motion.div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Industrias que{" "}
+          {t("titlePrefix")} {" "}
             <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
-              Transformamos
+            {t("titleHighlight")}
             </span>
           </h2>
 
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Especializados en optimización de procesos SAP S/4HANA para múltiples sectores industriales
+            {t("intro")}
           </p>
         </motion.div>
 
@@ -111,7 +113,7 @@ export function Industries() {
 
             return (
               <motion.div
-                key={industry.name}
+                key={industry.id}
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
@@ -148,13 +150,13 @@ export function Industries() {
                   {/* Category badge */}
                   <div className="mb-3">
                     <span className="inline-block px-3 py-1 bg-slate-100 rounded-full text-xs font-medium text-slate-600 group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors duration-300">
-                      {industry.category}
+                      {t(`items.${industry.id}.category`)}
                     </span>
                   </div>
 
                   {/* Industry name */}
                   <h3 className="text-lg font-bold text-foreground group-hover:text-blue-600 transition-colors duration-300 mb-2 text-balance">
-                    {industry.name}
+                    {t(`items.${industry.id}.name`)}
                   </h3>
 
                   {/* Animated accent line */}
@@ -181,9 +183,9 @@ export function Industries() {
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:2rem_2rem] opacity-20" />
 
           <div className="relative z-10">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">¿No encuentras tu industria?</h3>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{t("ctaTitle")}</h3>
             <p className="text-slate-300 mb-8 max-w-2xl mx-auto">
-              Contáctanos para soluciones personalizadas adaptadas a las necesidades específicas de tu sector
+              {t("ctaDescription")}
             </p>
             <motion.a
               href="#contacto"
@@ -191,7 +193,7 @@ export function Industries() {
               whileTap={{ scale: 0.95 }}
               className="inline-flex items-center gap-2 px-8 py-4 bg-white text-slate-900 rounded-full font-semibold hover:bg-blue-50 transition-colors duration-300 shadow-lg hover:shadow-xl"
             >
-              Hablar con un experto
+              {t("ctaButton")}
               <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>

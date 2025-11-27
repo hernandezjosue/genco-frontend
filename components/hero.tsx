@@ -5,16 +5,17 @@ import { Globe } from "@/components/globe"
 import { motion } from "framer-motion"
 import { ArrowRight, ChevronDown } from 'lucide-react'
 import { useTranslations } from 'next-intl'
-
+type ID = '#contacto' | '#servicios' | '#transformacion' | '#experiencia' | '#equipo'
+export const scrollToNext = (targetId:ID) => {
+    const nextSection = document.querySelector(targetId)
+    if (nextSection) {
+        nextSection.scrollIntoView({ behavior: "smooth" })
+    }
+}
 export function Hero() {
   const t = useTranslations('hero')
 
-  const scrollToNext = () => {
-    const nextSection = document.querySelector("#que-hacemos")
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" })
-    }
-  }
+
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-16 bg-background">
@@ -65,6 +66,7 @@ export function Hero() {
               transition={{ delay: 0.4 }}
             >
               <Button
+                  onClick={() => scrollToNext('#contacto')}
                 size="lg"
                 className="relative bg-primary text-primary-foreground hover:bg-primary/90 font-medium px-6 md:px-7 h-11 md:h-12 group overflow-hidden before:absolute before:inset-0 before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent before:translate-x-[-200%] hover:before:translate-x-[200%] before:transition-transform before:duration-1000 before:ease-in-out"
               >
@@ -72,6 +74,7 @@ export function Hero() {
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
               <Button
+                  onClick={() => scrollToNext('#servicios')}
                 size="lg"
                 variant="outline"
                 className="border-border hover:bg-accent font-medium px-6 md:px-7 h-11 md:h-12 bg-transparent"
@@ -94,7 +97,7 @@ export function Hero() {
       </div>
 
       <motion.button
-        onClick={scrollToNext}
+        onClick={() => scrollToNext('#contacto')}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground transition-colors cursor-pointer group"
         initial={{ opacity: 0, y: -10 }}
         animate={{ opacity: 1, y: 0 }}

@@ -69,7 +69,8 @@
       "emailPlaceholder": "Enter your email...",
       "message": "How can we help you?",
       "messagePlaceholder": "Enter your message...",
-      "submit": "Send Message"
+      "submit": "Send Message",
+      "submitting": "Sending..."
     },
     "footer": {
       "company": "Genco Consulting",
@@ -79,5 +80,83 @@
       "industries": "Industries",
       "copyright": "Genco Consulting. All rights reserved."
     }
+  },
+  "servicesDetailed": {
+    "titlePrefix": "Our",
+    "titleHighlight": "Specialized Services",
+    "intro": "Comprehensive solutions purpose-built to transform operations. Real stories, measurable results — straight from our satisfied clients.",
+    "items": {
+      "processImprovement": {
+        "title": "Process Improvement",
+        "description": "We optimize your business processes using proven methodologies that eliminate waste and maximize operational efficiency."
+      },
+      "processAutomation": {
+        "title": "Process Automation",
+        "description": "We implement technology solutions that automate repetitive tasks, reduce errors, and free up valuable time."
+      },
+      "informationTechnology": {
+        "title": "Information Technology",
+        "description": "We develop and implement robust technology systems that drive your company's digital transformation."
+      },
+      "supplyChainOptimization": {
+        "title": "Supply Chain Optimization",
+        "description": "We improve logistics efficiency from sourcing to delivery, reducing costs and cycle times."
+      },
+      "processCertifications": {
+        "title": "Process Certifications",
+        "description": "We guide you through obtaining international certifications that validate the quality of your operations."
+      },
+      "leanManufacturing": {
+        "title": "Lean Manufacturing",
+        "description": "We apply Lean principles to build efficient production systems that deliver maximum value with minimal waste."
+      },
+      "profitabilityIncrease": {
+        "title": "Profitability Increase",
+        "description": "We identify improvement opportunities that increase your margins and strengthen your business's financial position."
+      },
+      "costOptimization": {
+        "title": "Cost Optimization",
+        "description": "We analyze your cost structure to identify and eliminate unnecessary expenses without compromising quality."
+      },
+      "tpm": {
+        "title": "TPM",
+        "description": "We implement Total Productive Maintenance to maximize the effectiveness of your equipment and facilities."
+      },
+      "strategicPlanning": {
+        "title": "Strategic Planning",
+        "description": "We develop strategic plans aligned with your vision that turn objectives into measurable results."
+      },
+      "businessIntelligence": {
+        "title": "Business Intelligence",
+        "description": "We turn your data into actionable insights through dashboards and analysis that enable smarter decisions."
+      },
+      "organizationalDevelopment": {
+        "title": "Organizational Development",
+        "description": "We strengthen your human capital with programs that build skills and improve the organizational climate."
+      }
+    }
+  },
+  "industries": {
+    "badgeLabel": "Multi-industry Experience",
+    "titlePrefix": "Industries we",
+    "titleHighlight": "Transform",
+    "intro": "Specialists in SAP S/4HANA process optimization across multiple industrial sectors",
+    "items": {
+      "automotive": { "name": "Automotive", "category": "Manufacturing" },
+      "banking": { "name": "Banking", "category": "Financial Services" },
+      "consumer": { "name": "Consumer", "category": "Retail" },
+      "insurance": { "name": "Insurance", "category": "Financial Services" },
+      "manufacturing": { "name": "Manufacturing", "category": "Industry" },
+      "miningMetals": { "name": "Mining & Metals", "category": "Resources" },
+      "retail": { "name": "Retail", "category": "Commerce" },
+      "telecommunications": { "name": "Telecommunications", "category": "Technology" },
+      "logisticsTransport": { "name": "Logistics & Transportation", "category": "Services" },
+      "government": { "name": "Government", "category": "Public Sector" },
+      "textile": { "name": "Textile", "category": "Manufacturing" },
+      "chemical": { "name": "Chemical", "category": "Industry" }
+    },
+    "ctaTitle": "Can't find your industry?",
+    "ctaDescription": "Contact us for tailored solutions adapted to your sector's specific needs",
+    "ctaButton": "Talk to an expert"
   }
 }

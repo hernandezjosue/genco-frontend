@@ -5,14 +5,21 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
+import {useActionState, useRef} from "react"
 import { ArrowRight } from 'lucide-react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
+import {FormState, submitContactForm} from "@/components/form/action";
 
 export function Contact() {
     const ref = useRef(null)
     const isInView = useInView(ref, { once: true, margin: "-100px" })
     const t = useTranslations('contact')
+    const locale = useLocale()
+
+    const [currentState, formAction, isPending] = useActionState<
+        FormState,
+        FormData
+    >(submitContactForm, {});
 
     return (
         <section id="contacto" className="relative md:py-32 bg-white overflow-hidden lg:py-0 py-0" ref={ref}>
@@ -61,7 +68,11 @@ export function Contact() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                     >
                         <div className="bg-gray-50 rounded-3xl p-8 md:p-10 lg:p-12 border border-gray-200 shadow-sm">
-                            <form className="space-y-6">
+                            <form
+                              action={formAction}
+                                className="space-y-6">
+                                {/* Campo oculto para pasar el locale actual al servidor */}
+                                <input type="hidden" name="locale" value={locale} />
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div className="space-y-2">
                                         <Label htmlFor="firstName" className="text-sm font-semibold text-foreground">
@@ -69,8 +80,10 @@ export function Contact() {
                                         </Label>
                                         <Input
                                             id="firstName"
+                                            name="firstName"         
                                             placeholder={t('form.firstNamePlaceholder')}
                                             className="h-12 bg-white border-gray-300 rounded-xl focus:ring-2 focus:ring-primary"
+                                            required
                                         />
                                     </div>
                                     <div className="space-y-2">
@@ -79,8 +92,10 @@ export function Contact() {
                                         </Label>
                                         <Input
                                             id="lastName"
+                                            name="lastName"          
                                             placeholder={t('form.lastNamePlaceholder')}
                                             className="h-12 bg-white border-gray-300 rounded-xl focus:ring-2 focus:ring-primary"
+                                            required
                                         />
                                     </div>
                                 </div>
@@ -91,9 +106,11 @@ export function Contact() {
                                     </Label>
                                     <Input
                                         id="email"
+                                        name="email"              
                                         type="email"
                                         placeholder={t('form.emailPlaceholder')}
                                         className="h-12 bg-white border-gray-300 rounded-xl focus:ring-2 focus:ring-primary"
+                                        required
                                     />
                                 </div>
 
@@ -103,19 +120,30 @@ export function Contact() {
                                     </Label>
                                     <Textarea
                                         id="message"
+                                        name="message"            
                                         rows={6}
                                         placeholder={t('form.messagePlaceholder')}
                                         className="bg-white border-gray-300 rounded-xl resize-none focus:ring-2 focus:ring-primary"
+                                        required
                                     />
                                 </div>
 
+                                {/* Feedback del servidor */}
+                                {currentState?.error && (
+                                    <p className="text-sm text-red-500">{currentState.error}</p>
+                                )}
+                                {currentState?.success && currentState?.message && (
+                                    <p className="text-sm text-green-600">{currentState.message}</p>
+                                )}
+
                                 <div className="pt-4 flex justify-end">
                                     <Button
+                                        disabled={isPending}
                                         type="submit"
                                         size="lg"
                                         className="bg-foreground text-background hover:bg-foreground/90 h-14 px-10 rounded-full font-semibold text-base group"
                                     >
-                                        {t('form.submit')}
+                                        {isPending ? t('form.submitting')  : t('form.submit')}
                                         <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                     </Button>
                                 </div>
