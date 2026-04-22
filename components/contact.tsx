@@ -46,7 +46,7 @@ export function Contact() {
                             <div className="space-y-2">
                                 {/* Updated Email */}
                                 <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">{t('email')}</p>
-                                <p className="font-bold text-foreground text-lg">inquiry@starthubcenters.com</p>
+                                <p className="font-bold text-foreground text-lg">Contact@gencoconsulting.com</p>
                             </div>
 
                             <div className="space-y-4">
@@ -180,7 +180,7 @@ export function Contact() {
                         {/* Empty slot or other relevant info if needed */}
                         <div>
                             <h4 className="text-sm font-semibold text-white mb-4">{t('email')}</h4>
-                            <p className="text-sm text-white/70">inquiry@starthubcenters.com</p>
+                            <p className="text-sm text-white/70">Contact@gencoconsulting.com</p>
                         </div>
                     </div>
                     <div className="pt-8 border-t border-white/10 text-center">
